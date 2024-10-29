@@ -12,6 +12,7 @@
   <modules>
     <module>galileoim-tools</module>
     <module>galileoim-chat-server</module>
+    <module>galileoim-tools/galileoim-oss-starter</module>
   </modules>
 
   <parent>
