@@ -23,14 +23,14 @@
             <groupId>org.william</groupId>
             <artifactId>galileoim-common-starter</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.abin.mallchat</groupId>-->
-<!--            <artifactId>mallchat-transaction</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.abin.mallchat</groupId>-->
-<!--            <artifactId>mallchat-oss-starter</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.william</groupId>
+            <artifactId>galileoim-transaction</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.william</groupId>
+            <artifactId>galileoim-oss-starter</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.knuddels</groupId>
             <artifactId>jtokkit</artifactId>
