@@ -15,20 +15,20 @@ import org.springframework.stereotype.Service;
  * Author: <a href="https://github.com/zongzibinbin">abin</a>
  * Date: 2023-06-20
  */
-@Service
-public class OssServiceImpl implements OssService {
-    @Autowired
-    private MinIOTemplate minIOTemplate;
-
-    @Override
-    public OssResp getUploadUrl(Long uid, UploadUrlReq req) {
-        OssSceneEnum sceneEnum = OssSceneEnum.of(req.getScene());
-        AssertUtil.isNotEmpty(sceneEnum, "场景有误");
-        OssReq ossReq = OssReq.builder()
-                .fileName(req.getFileName())
-                .filePath(sceneEnum.getPath())
-                .uid(uid)
-                .build();
-        return minIOTemplate.getPreSignedObjectUrl(ossReq);
-    }
-}
+//@Service
+//public class OssServiceImpl implements OssService {
+//    @Autowired
+//    private MinIOTemplate minIOTemplate;
+//
+//    @Override
+//    public OssResp getUploadUrl(Long uid, UploadUrlReq req) {
+//        OssSceneEnum sceneEnum = OssSceneEnum.of(req.getScene());
+//        AssertUtil.isNotEmpty(sceneEnum, "场景有误");
+//        OssReq ossReq = OssReq.builder()
+//                .fileName(req.getFileName())
+//                .filePath(sceneEnum.getPath())
+//                .uid(uid)
+//                .build();
+//        return minIOTemplate.getPreSignedObjectUrl(ossReq);
+//    }
+//}

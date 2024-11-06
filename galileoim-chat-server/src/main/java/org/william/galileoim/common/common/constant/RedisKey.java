@@ -1,10 +1,10 @@
 package org.william.galileoim.common.common.constant;
 
 /**
- * @author zhongzb create on 2021/06/10
+ * @author mercury
  */
 public class RedisKey {
-    private static final String BASE_KEY = "mallchat:";
+    private static final String BASE_KEY = "galileoim:";
 
     /**
      * 在线用户列表

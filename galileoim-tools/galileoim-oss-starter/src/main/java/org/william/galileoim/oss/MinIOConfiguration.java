@@ -17,20 +17,20 @@ import org.springframework.context.annotation.Configuration;
 public class MinIOConfiguration {
 
 
-    @Bean
-    @SneakyThrows
-    @ConditionalOnMissingBean(MinioClient.class)
-    public MinioClient minioClient(OssProperties ossProperties) {
-        return MinioClient.builder()
-                .endpoint(ossProperties.getEndpoint())
-                .credentials(ossProperties.getAccessKey(), ossProperties.getSecretKey())
-                .build();
-    }
-
-    @Bean
-    @ConditionalOnBean({MinioClient.class})
-    @ConditionalOnMissingBean(MinIOTemplate.class)
-    public MinIOTemplate minioTemplate(MinioClient minioClient, OssProperties ossProperties) {
-        return new MinIOTemplate(minioClient, ossProperties);
-    }
+//    @Bean
+//    @SneakyThrows
+//    @ConditionalOnMissingBean(MinioClient.class)
+//    public MinioClient minioClient(OssProperties ossProperties) {
+//        return MinioClient.builder()
+//                .endpoint(ossProperties.getEndpoint())
+//                .credentials(ossProperties.getAccessKey(), ossProperties.getSecretKey())
+//                .build();
+//    }
+//
+//    @Bean
+//    @ConditionalOnBean({MinioClient.class})
+//    @ConditionalOnMissingBean(MinIOTemplate.class)
+//    public MinIOTemplate minioTemplate(MinioClient minioClient, OssProperties ossProperties) {
+//        return new MinIOTemplate(minioClient, ossProperties);
+//    }
 }
