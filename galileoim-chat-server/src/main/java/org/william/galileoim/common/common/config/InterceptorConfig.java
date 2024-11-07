@@ -10,8 +10,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
  * Description: 配置所有拦截器
- * Author: <a href="https://github.com/zongzibinbin">abin</a>
- * Date: 2023-04-05
  */
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
