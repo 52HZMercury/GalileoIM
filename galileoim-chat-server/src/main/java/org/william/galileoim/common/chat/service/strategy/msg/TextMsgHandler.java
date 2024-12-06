@@ -31,8 +31,6 @@ import java.util.stream.Collectors;
 
 /**
  * Description: 普通文本消息
- * Author: <a href="https://github.com/zongzibinbin">abin</a>
- * Date: 2023-06-04
  */
 @Component
 public class TextMsgHandler extends AbstractMsgHandler<TextMsgReq> {

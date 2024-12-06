@@ -26,8 +26,6 @@ import java.util.stream.Stream;
 
 /**
  * Description: 安全执行切面
- * Author: <a href="https://github.com/zongzibinbin">abin</a>
- * Date: 2023-04-20
  */
 @Slf4j
 @Aspect
