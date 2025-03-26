@@ -26,11 +26,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
 
-/**
- * Description:
- * Author: <a href="https://github.com/zongzibinbin">abin</a>
- * Date: 2023-03-23
- */
+
 @Configuration
 @EnableSwagger2WebMvc
 public class SwaggerConfig {

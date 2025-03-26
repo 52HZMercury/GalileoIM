@@ -15,8 +15,6 @@ import java.util.Date;
 
 /**
  * Description:
- * Author: <a href="https://github.com/zongzibinbin">abin</a>
- * Date: 2023-08-06
  */
 @Data
 @Builder

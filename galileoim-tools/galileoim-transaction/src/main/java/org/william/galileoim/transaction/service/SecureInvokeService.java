@@ -64,7 +64,7 @@ public class SecureInvokeService {
     }
 
     private Date getNextRetryTime(Integer retryTimes) {//或者可以采用退避算法
-        double waitMinutes = Math.pow(RETRY_INTERVAL_MINUTES, retryTimes);//重试时间指数上升 2m 4m 8m 16m
+        double waitMinutes = Math.pow(RETRY_INTERVAL_MINUTES, retryTimes);//重试时间指数上升 2m 4m 8m 16m 退避算法
         return DateUtil.offsetMinute(new Date(), (int) waitMinutes);
     }
 
@@ -105,6 +105,7 @@ public class SecureInvokeService {
         SecureInvokeDTO secureInvokeDTO = record.getSecureInvokeDTO();
         try {
             SecureInvokeHolder.setInvoking();
+            //通过反射获取类
             Class<?> beanClass = Class.forName(secureInvokeDTO.getClassName());
             Object bean = SpringUtil.getBean(beanClass);
             List<String> parameterStrings = JsonUtils.toList(secureInvokeDTO.getParameterTypes(), String.class);

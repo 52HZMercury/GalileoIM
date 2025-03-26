@@ -14,8 +14,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * Description: 线程池配置
- * Author: <a href="https://github.com/zongzibinbin">abin</a>
- * Date: 2023-04-09
  */
 @Configuration
 @EnableAsync
@@ -23,7 +21,7 @@ public class ThreadPoolConfig implements AsyncConfigurer, SecureInvokeConfigurer
     /**
      * 项目共用线程池
      */
-    public static final String MALLCHAT_EXECUTOR = "mallchatExecutor";
+    public static final String GALILEOIM_EXECUTOR = "galileoimExecutor";
     /**
      * websocket通信线程池
      */
@@ -34,22 +32,22 @@ public class ThreadPoolConfig implements AsyncConfigurer, SecureInvokeConfigurer
 
     @Override
     public Executor getAsyncExecutor() {
-        return mallchatExecutor();
+        return galileoimExecutor();
     }
 
     @Override
     public Executor getSecureInvokeExecutor() {
-        return mallchatExecutor();
+        return galileoimExecutor();
     }
 
-    @Bean(MALLCHAT_EXECUTOR)
+    @Bean(GALILEOIM_EXECUTOR)
     @Primary
-    public ThreadPoolTaskExecutor mallchatExecutor() {
+    public ThreadPoolTaskExecutor galileoimExecutor() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(10);
         executor.setMaxPoolSize(10);
         executor.setQueueCapacity(200);
-        executor.setThreadNamePrefix("mallchat-executor-");
+        executor.setThreadNamePrefix("galileoim-executor-");
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());//满了调用线程执行，认为重要任务
         executor.setThreadFactory(new MyThreadFactory(executor));
         executor.initialize();
